@@ -1,3 +1,4 @@
+import { Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { SafeAreaView, View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
@@ -46,16 +47,24 @@ const ScreenComponent = () => {
     }}>
         <Text style={styles.buttonText}>Planning Map</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => {}}>
+      <TouchableOpacity style={styles.button} onPress={() => {
+      navigation.navigate("ScreenAI47");
+    }}>
         <Text style={styles.buttonText}>Closed Goals</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => {}}>
+      <TouchableOpacity style={styles.button} onPress={() => {
+      navigation.navigate("ScreenAI48");
+    }}>
         <Text style={styles.buttonText}>Team</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => {}}>
+      <TouchableOpacity style={styles.button} onPress={() => {
+      navigation.navigate("ScreenAI50");
+    }}>
         <Text style={styles.buttonText}>Complexity & Strategy</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => {}}>
+      <TouchableOpacity style={styles.button} onPress={() => {
+      navigation.navigate("ScreenAI51");
+    }}>
         <Text style={styles.buttonText}>Legacy Questionnaire</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button} onPress={() => {}}>
@@ -73,7 +82,12 @@ const ScreenComponent = () => {
       <TouchableOpacity style={styles.button} onPress={() => {}}>
         <Text style={styles.buttonText}>Report Builder</Text>
       </TouchableOpacity>
-    </SafeAreaView>;
+      <TouchableOpacity style={styles.button} onPress={() => {}}>
+        <Text style={styles.buttonText}>Planning Table</Text>
+      </TouchableOpacity>
+    <Pressable onPress={() => {
+      navigation.navigate("ScreenAI49");
+    }}><Text style={styles.CQOqFqsS}>{"Planning table "}</Text></Pressable></SafeAreaView>;
 };
 
 const styles = StyleSheet.create({
@@ -104,6 +118,13 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 18
+  },
+  CQOqFqsS: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
   }
 });
 export default ScreenComponent;
