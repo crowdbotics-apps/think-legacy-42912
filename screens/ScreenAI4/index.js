@@ -1,24 +1,32 @@
 import { StyleSheet } from "react-native";
-import React from 'react';
-import { SafeAreaView, View, Text, TextInput, Button, TouchableOpacity, Linking } from 'react-native';
+import React from "react";
+import { SafeAreaView, View, Text, TextInput, TouchableOpacity, Linking } from "react-native";
 
 const SignUpScreen = () => {
   return <SafeAreaView style={_styles.xpkIBwcb}>
       <TextInput style={_styles.mRkpPIBV} placeholder="Email Address" />
       <View style={_styles.mnSuRURp}>
         <Text>User type:</Text>
-        <Button title="Adviser" onPress={() => {}} />
-        <Button title="Client" onPress={() => {}} />
+        <TouchableOpacity style={_styles.button} onPress={() => {}}>
+          <Text style={_styles.buttonText}>Adviser</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={_styles.button} onPress={() => {}}>
+          <Text style={_styles.buttonText}>Client</Text>
+        </TouchableOpacity>
       </View>
       <TextInput style={_styles.nlMmqLpv} placeholder="Full Name" />
       <TextInput style={_styles.xKxqPYCL} placeholder="Phone Number" />
       <TextInput style={_styles.CgXwJQMV} placeholder="Set Password" secureTextEntry />
       <TextInput style={_styles.ciqyJwwa} placeholder="Confirm Password" secureTextEntry />
-      <Button title="Sign Up" onPress={() => {}} />
-      <Button title="Cancel" onPress={() => {}} />
+      <TouchableOpacity style={_styles.button} onPress={() => {}}>
+        <Text style={_styles.buttonText}>Sign Up</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={_styles.button} onPress={() => {}}>
+        <Text style={_styles.buttonText}>Cancel</Text>
+      </TouchableOpacity>
       <Text style={_styles.eJSJfofE}>
-        By signing up, you agree to our{' '}
-        <Text style={_styles.XwNNzgkS} onPress={() => Linking.openURL('https://tinyurl.com/42evm3m3')}>
+        By signing up, you agree to our{" "}
+        <Text style={_styles.XwNNzgkS} onPress={() => Linking.openURL("https://tinyurl.com/42evm3m3")}>
           Terms and Conditions and Privacy Policy
         </Text>
       </Text>
@@ -86,5 +94,15 @@ const _styles = StyleSheet.create({
   },
   xwdyLQvz: {
     color: "blue"
+  },
+  button: {
+    backgroundColor: "#2196F3",
+    padding: 10,
+    marginBottom: 10,
+    borderRadius: 5
+  },
+  buttonText: {
+    color: "#FFFFFF",
+    textAlign: "center"
   }
 });
