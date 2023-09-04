@@ -21,13 +21,19 @@ const ScreenComponent = () => {
     }}>
         <Text style={styles.buttonText}>Members</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => {}}>
+      <TouchableOpacity style={styles.button} onPress={() => {
+      navigation.navigate("ScreenAI42");
+    }}>
         <Text style={styles.buttonText}>Engagement</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => {}}>
+      <TouchableOpacity style={styles.button} onPress={() => {
+      navigation.navigate("ScreenAI43");
+    }}>
         <Text style={styles.buttonText}>Vision</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => {}}>
+      <TouchableOpacity style={styles.button} onPress={() => {
+      navigation.navigate("ScreenAI44");
+    }}>
         <Text style={styles.buttonText}>Values</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button} onPress={() => {}}>
