@@ -1,7 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React from 'react';
 import { SafeAreaView, ScrollView, View, Text, TextInput, Button, StyleSheet } from 'react-native';
 
 const ScreenComponent = () => {
+  const navigation = useNavigation();
   return <SafeAreaView style={styles.container}>
       <ScrollView>
         <View style={styles.section}>
@@ -34,7 +37,9 @@ const ScreenComponent = () => {
         /* ... Repeat for all sections ... */
       }
         <View style={styles.section}>
-          <Text style={styles.title}>Report - List of all reports</Text>
+          <Pressable onPress={() => {
+          navigation.navigate("ScreenAI34");
+        }}><Text style={styles.title}>Report - List of all reports</Text></Pressable>
           <Button title="Download report" onPress={() => {}} />
           <Button title="Send report" onPress={() => {}} />
         </View>
