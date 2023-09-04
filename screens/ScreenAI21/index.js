@@ -91,7 +91,9 @@ const ScreenComponent = () => {
       navigation.navigate("ScreenAI49");
     }}><Text style={styles.CQOqFqsS}>{"Planning table "}</Text></Pressable><Pressable onPress={() => {
       navigation.navigate("ScreenAI36");
-    }}><Text style={styles.hqxROJcE}>{"Report Builder"}</Text></Pressable></SafeAreaView>;
+    }}><Text style={styles.hqxROJcE}>{"Report Builder"}</Text></Pressable><Pressable onPress={() => {
+      navigation.navigate("ScreenAI35");
+    }}><Text style={styles.BQGiGpgE}>{"Report builder"}</Text></Pressable></SafeAreaView>;
 };
 
 const styles = StyleSheet.create({
@@ -131,6 +133,13 @@ const styles = StyleSheet.create({
     borderRadius: 0
   },
   hqxROJcE: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  BQGiGpgE: {
     width: 100,
     height: 50,
     lineHeight: 14,
