@@ -1,8 +1,7 @@
 import React from "react";
-import { SafeAreaView, View, Text, Image, ScrollView, StyleSheet, TouchableOpacity } from "react-native";
+import { SafeAreaView, View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 
 const ScreenComponent = () => {
-  const menuItems = ["Members", "Engagement", "Vision", "Values", "Goal Clarity / Goal Achievement", "Planning Map", "Closed Goals", "Team", "Complexity & Strategy", "Legacy Questionnaire", "Family Business Questionnaire", "Business Questionnaire", "Family Legacy Questionnaire", "Reports", "Report Builder"];
   return <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <Image style={styles.logo} source={{
@@ -10,13 +9,54 @@ const ScreenComponent = () => {
       }} />
         <Text style={styles.title}>Side Menu</Text>
       </View>
-      <ScrollView style={styles.menu}>
-        {menuItems.map((item, index) => <TouchableOpacity key={index} style={styles.menuItem}>
-            <Text style={styles.menuItemText}>
-              {item}
-            </Text>
-          </TouchableOpacity>)}
-      </ScrollView>
+      <TouchableOpacity style={styles.button} onPress={() => {}}>
+        <Text style={styles.buttonText}>View</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => {}}>
+        <Text style={styles.buttonText}>Members</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => {}}>
+        <Text style={styles.buttonText}>Engagement</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => {}}>
+        <Text style={styles.buttonText}>Vision</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => {}}>
+        <Text style={styles.buttonText}>Values</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => {}}>
+        <Text style={styles.buttonText}>Goal Clarity / Goal Achievement</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => {}}>
+        <Text style={styles.buttonText}>Planning Map</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => {}}>
+        <Text style={styles.buttonText}>Closed Goals</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => {}}>
+        <Text style={styles.buttonText}>Team</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => {}}>
+        <Text style={styles.buttonText}>Complexity & Strategy</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => {}}>
+        <Text style={styles.buttonText}>Legacy Questionnaire</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => {}}>
+        <Text style={styles.buttonText}>Family Business Questionnaire</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => {}}>
+        <Text style={styles.buttonText}>Business Questionnaire</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => {}}>
+        <Text style={styles.buttonText}>Family Legacy Questionnaire</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => {}}>
+        <Text style={styles.buttonText}>Reports</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => {}}>
+        <Text style={styles.buttonText}>Report Builder</Text>
+      </TouchableOpacity>
     </SafeAreaView>;
 };
 
@@ -40,16 +80,13 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold"
   },
-  menu: {
-    padding: 20
-  },
-  menuItem: {
-    backgroundColor: "#FFFFFF",
+  button: {
+    alignItems: "center",
+    backgroundColor: "#DDDDDD",
     padding: 10,
-    marginBottom: 10,
-    borderRadius: 5
+    margin: 10
   },
-  menuItemText: {
+  buttonText: {
     fontSize: 18
   }
 });
