@@ -89,7 +89,9 @@ const ScreenComponent = () => {
         <Text>Co-Adviser can see a list of assigned clients</Text>
         <Text>Client name</Text>
         <Text>Email address</Text>
-      </View>
+      <Pressable onPress={() => {
+        navigation.navigate("ScreenAI37");
+      }}><Text style={_styles.RWWzAjbq}>{"Notification"}</Text></Pressable></View>
     </SafeAreaView>;
 };
 
@@ -124,5 +126,12 @@ const _styles = StyleSheet.create({
   buttonText: {
     color: '#fff',
     textAlign: 'center'
+  },
+  RWWzAjbq: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
   }
 });
