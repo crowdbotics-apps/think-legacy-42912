@@ -1,7 +1,9 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import { SafeAreaView, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
 
 const TrialScreen = () => {
+  const navigation = useNavigation();
   const [trialPeriod, setTrialPeriod] = useState(14);
   return <SafeAreaView style={styles.container}>
       <Image style={styles.image} source={{
@@ -10,7 +12,9 @@ const TrialScreen = () => {
       <Text style={styles.text}>
         You have {trialPeriod} days free trial period
       </Text>
-      <TouchableOpacity style={styles.button} onPress={() => {}}>
+      <TouchableOpacity style={styles.button} onPress={() => {
+      navigation.navigate("ScreenAI13");
+    }}>
         <Text style={styles.buttonText}>OK</Text>
       </TouchableOpacity>
 
