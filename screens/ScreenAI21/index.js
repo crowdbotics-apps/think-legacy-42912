@@ -67,7 +67,9 @@ const ScreenComponent = () => {
     }}>
         <Text style={styles.buttonText}>Legacy Questionnaire</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => {}}>
+      <TouchableOpacity style={styles.button} onPress={() => {
+      navigation.navigate("ScreenAI33");
+    }}>
         <Text style={styles.buttonText}>Family Business Questionnaire</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button} onPress={() => {}}>
