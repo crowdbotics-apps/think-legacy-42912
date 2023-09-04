@@ -1,7 +1,9 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import { SafeAreaView, View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
 
 const SubscriptionScreen = () => {
+  const navigation = useNavigation();
   const [subscriptionType, setSubscriptionType] = useState("Monthly");
 
   const handleSubscriptionChange = type => {
@@ -15,7 +17,9 @@ const SubscriptionScreen = () => {
       <Text style={styles.title}>Choose your plan</Text>
       <View style={styles.plan}>
         <Text style={styles.planTitle}>Free Trial</Text>
-        <TouchableOpacity style={styles.button} onPress={() => handleSubscriptionChange("Free Trial")}>
+        <TouchableOpacity style={styles.button} onPress={() => {
+        navigation.navigate("ScreenAI11");
+      }}>
           <Text style={styles.buttonText}>Choose</Text>
         </TouchableOpacity>
       </View>

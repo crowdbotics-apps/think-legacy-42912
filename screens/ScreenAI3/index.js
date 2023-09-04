@@ -24,7 +24,9 @@ const App = () => {
         <TouchableOpacity style={styles.button} onPress={() => {}}>
           <Text style={styles.buttonText}>Log in</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => {}}>
+        <TouchableOpacity style={styles.button} onPress={() => {
+        navigation.navigate("ScreenAI4");
+      }}>
           <Text style={styles.buttonText}>Create creator account</Text>
         </TouchableOpacity>
       </View>

@@ -1,8 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
 import { StyleSheet } from "react-native";
 import React from "react";
 import { SafeAreaView, View, Text, TextInput, TouchableOpacity, Linking } from "react-native";
 
 const SignUpScreen = () => {
+  const navigation = useNavigation();
   return <SafeAreaView style={_styles.xpkIBwcb}>
       <TextInput style={_styles.mRkpPIBV} placeholder="Email Address" />
       <View style={_styles.mnSuRURp}>
@@ -18,7 +20,9 @@ const SignUpScreen = () => {
       <TextInput style={_styles.xKxqPYCL} placeholder="Phone Number" />
       <TextInput style={_styles.CgXwJQMV} placeholder="Set Password" secureTextEntry />
       <TextInput style={_styles.ciqyJwwa} placeholder="Confirm Password" secureTextEntry />
-      <TouchableOpacity style={_styles.button} onPress={() => {}}>
+      <TouchableOpacity style={_styles.button} onPress={() => {
+      navigation.navigate("ScreenAI9");
+    }}>
         <Text style={_styles.buttonText}>Sign Up</Text>
       </TouchableOpacity>
       <TouchableOpacity style={_styles.button} onPress={() => {}}>
