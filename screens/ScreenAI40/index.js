@@ -1,20 +1,24 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import { StyleSheet } from "react-native";
-import React from 'react';
-import { SafeAreaView, View, Text, Button, FlatList } from 'react-native';
+import React from "react";
+import { SafeAreaView, View, Text, Button, FlatList } from "react-native";
 const dummyData = [{
-  id: '1',
-  name: 'John Doe',
-  email: 'john@example.com',
-  address: '123 Street'
+  id: "1",
+  name: "John Doe",
+  email: "john@example.com",
+  address: "123 Street"
 }, {
-  id: '2',
-  name: 'Jane Doe',
-  email: 'jane@example.com',
-  address: '456 Avenue'
+  id: "2",
+  name: "Jane Doe",
+  email: "jane@example.com",
+  address: "456 Avenue"
 } // Add more dummy data as needed
 ];
 
 const MemberScreen = () => {
+  const navigation = useNavigation();
+
   const renderItem = ({
     item
   }) => <View style={_styles.wPxEaJSM}>
@@ -31,7 +35,9 @@ const MemberScreen = () => {
       <View style={_styles.dsrvxvXp}>
         <Text style={_styles.rBlAfPtI}>Client Name</Text>
         <Text style={_styles.JOfeFevw}>client@example.com</Text>
-        <Button title="Add new member" onPress={() => {}} />
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI41");
+      }}><Text title="Add new member" onPress={() => {}} style={_styles.tHDFPLKv}>Add new member</Text></Pressable>
         <Text style={_styles.rABeJAMH}>Member add requests</Text>
         <FlatList data={dummyData} renderItem={renderItem} keyExtractor={item => item.id} />
       </View>
@@ -80,5 +86,10 @@ const _styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
     marginTop: 20
+  },
+  tHDFPLKv: {
+    fontSize: 22,
+    fontWeight: "700",
+    textAlign: "center"
   }
 });
