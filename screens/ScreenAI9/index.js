@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { SafeAreaView, View, Text, Image, Button, StyleSheet } from 'react-native';
+import React, { useState } from "react";
+import { SafeAreaView, View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
 
 const SubscriptionScreen = () => {
-  const [subscriptionType, setSubscriptionType] = useState('Monthly');
+  const [subscriptionType, setSubscriptionType] = useState("Monthly");
 
   const handleSubscriptionChange = type => {
     setSubscriptionType(type);
@@ -10,31 +10,41 @@ const SubscriptionScreen = () => {
 
   return <SafeAreaView style={styles.container}>
       <Image style={styles.image} source={{
-      uri: 'https://tinyurl.com/42evm3m3'
+      uri: "https://tinyurl.com/42evm3m3"
     }} />
       <Text style={styles.title}>Choose your plan</Text>
       <View style={styles.plan}>
         <Text style={styles.planTitle}>Free Trial</Text>
-        <Button title="Choose" onPress={() => handleSubscriptionChange('Free Trial')} />
+        <TouchableOpacity style={styles.button} onPress={() => handleSubscriptionChange("Free Trial")}>
+          <Text style={styles.buttonText}>Choose</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.plan}>
         <Text style={styles.planTitle}>Basic Offer</Text>
-        <Button title="Choose" onPress={() => handleSubscriptionChange('Basic Offer')} />
+        <TouchableOpacity style={styles.button} onPress={() => handleSubscriptionChange("Basic Offer")}>
+          <Text style={styles.buttonText}>Choose</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.plan}>
         <Text style={styles.planTitle}>Premium Offer</Text>
-        <Button title="Choose" onPress={() => handleSubscriptionChange('Premium Offer')} />
+        <TouchableOpacity style={styles.button} onPress={() => handleSubscriptionChange("Premium Offer")}>
+          <Text style={styles.buttonText}>Choose</Text>
+        </TouchableOpacity>
       </View>
-      <Text style={styles.subscriptionType}>Subscription type: {subscriptionType}</Text>
-      <Text style={styles.price}>Price: {subscriptionType === 'Monthly' ? '$10' : '$100'}</Text>
+      <Text style={styles.subscriptionType}>
+        Subscription type: {subscriptionType}
+      </Text>
+      <Text style={styles.price}>
+        Price: {subscriptionType === "Monthly" ? "$10" : "$100"}
+      </Text>
     </SafeAreaView>;
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
+    alignItems: "center",
+    justifyContent: "center"
   },
   image: {
     width: 200,
@@ -43,30 +53,39 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 20
   },
   plan: {
-    width: '80%',
+    width: "80%",
     padding: 20,
     marginBottom: 20,
     borderRadius: 10,
-    backgroundColor: '#f0f0f0',
-    alignItems: 'center'
+    backgroundColor: "#f0f0f0",
+    alignItems: "center"
   },
   planTitle: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 10
+  },
+  button: {
+    backgroundColor: "#007BFF",
+    padding: 10,
+    borderRadius: 5
+  },
+  buttonText: {
+    color: "#fff",
+    fontSize: 16
   },
   subscriptionType: {
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginTop: 20
   },
   price: {
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginTop: 10
   }
 });
