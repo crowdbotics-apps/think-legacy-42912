@@ -1,7 +1,9 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { SafeAreaView, StyleSheet, View, TextInput, TouchableOpacity, Image, Text } from "react-native";
 
 const App = () => {
+  const navigation = useNavigation();
   return <SafeAreaView style={styles.container}>
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={{
@@ -14,7 +16,9 @@ const App = () => {
         <TextInput style={styles.input} placeholder="Password" secureTextEntry />
       </View>
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button} onPress={() => {}}>
+        <TouchableOpacity style={styles.button} onPress={() => {
+        navigation.navigate("ScreenAI5");
+      }}>
           <Text style={styles.buttonText}>Forgot password</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => {}}>
