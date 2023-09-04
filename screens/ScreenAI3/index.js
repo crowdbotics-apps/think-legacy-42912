@@ -1,11 +1,11 @@
-import React from 'react';
-import { SafeAreaView, StyleSheet, View, TextInput, Button, Image, Text } from 'react-native';
+import React from "react";
+import { SafeAreaView, StyleSheet, View, TextInput, TouchableOpacity, Image, Text } from "react-native";
 
 const App = () => {
   return <SafeAreaView style={styles.container}>
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={{
-        uri: 'https://tinyurl.com/42evm3m3'
+        uri: "https://tinyurl.com/42evm3m3"
       }} />
         <Text style={styles.appName}>App Name</Text>
       </View>
@@ -14,9 +14,15 @@ const App = () => {
         <TextInput style={styles.input} placeholder="Password" secureTextEntry />
       </View>
       <View style={styles.buttonContainer}>
-        <Button title="Forgot password" onPress={() => {}} />
-        <Button title="Log in" onPress={() => {}} />
-        <Button title="Create creator account" onPress={() => {}} />
+        <TouchableOpacity style={styles.button} onPress={() => {}}>
+          <Text style={styles.buttonText}>Forgot password</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={() => {}}>
+          <Text style={styles.buttonText}>Log in</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={() => {}}>
+          <Text style={styles.buttonText}>Create creator account</Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>;
 };
@@ -24,12 +30,12 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center"
   },
   logoContainer: {
-    alignItems: 'center',
+    alignItems: "center",
     marginBottom: 50
   },
   logo: {
@@ -38,22 +44,32 @@ const styles = StyleSheet.create({
   },
   appName: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginTop: 10
   },
   inputContainer: {
-    width: '80%',
+    width: "80%",
     marginBottom: 20
   },
   input: {
     height: 40,
-    borderColor: 'gray',
+    borderColor: "gray",
     borderWidth: 1,
     marginBottom: 10,
     paddingLeft: 10
   },
   buttonContainer: {
-    width: '80%'
+    width: "80%"
+  },
+  button: {
+    backgroundColor: "#007BFF",
+    padding: 10,
+    borderRadius: 5,
+    marginBottom: 10
+  },
+  buttonText: {
+    color: "#fff",
+    textAlign: "center"
   }
 });
 export default App;
