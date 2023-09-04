@@ -1,8 +1,11 @@
+import { Pressable } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import { StyleSheet } from "react-native";
 import React from "react";
 import { SafeAreaView, View, Text, Image, TextInput, Picker, FlatList, TouchableOpacity } from "react-native";
 
 const ScreenComponent = () => {
+  const navigation = useNavigation();
   const dummyData = [{
     id: "1",
     name: "Client 1",
@@ -18,22 +21,32 @@ const ScreenComponent = () => {
   }];
   return <SafeAreaView style={_styles.kMtwVmCW}>
       <View style={_styles.FvGxeswp}>
-        <TouchableOpacity style={_styles.button}>
+        <TouchableOpacity style={_styles.button} onPress={() => {
+        navigation.navigate("ScreenAI20");
+      }}>
           <Text style={_styles.buttonText}>Manage Clients</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={_styles.button}>
+        <TouchableOpacity style={_styles.button} onPress={() => {
+        navigation.navigate("ScreenAI17");
+      }}>
           <Text style={_styles.buttonText}>Manage Templates</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={_styles.button}>
+        <TouchableOpacity style={_styles.button} onPress={() => {
+        navigation.navigate("ScreenAI15");
+      }}>
           <Text style={_styles.buttonText}>Manage Co-Adviser</Text>
         </TouchableOpacity>
-        <Image source={{
-        uri: "https://tinyurl.com/42evm3m3"
-      }} style={_styles.virGmmDm} />
-        <TouchableOpacity style={_styles.button}>
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI19");
+      }}><Image source={{
+          uri: "https://tinyurl.com/42evm3m3"
+        }} style={_styles.virGmmDm} /></Pressable>
+        <TouchableOpacity style={_styles.button} onPress={() => {
+        navigation.navigate("ScreenAI16");
+      }}>
           <Text style={_styles.buttonText}>Complete Profile Setup/My Profile</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={_styles.button}>
+        <TouchableOpacity style={_styles.button} onPress={() => {}}>
           <Text style={_styles.buttonText}>Log Out</Text>
         </TouchableOpacity>
 
