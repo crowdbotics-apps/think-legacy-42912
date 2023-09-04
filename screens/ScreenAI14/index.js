@@ -1,31 +1,41 @@
 import { StyleSheet } from "react-native";
-import React from 'react';
-import { SafeAreaView, View, Text, Button, Image, TextInput, Picker, FlatList, CheckBox } from 'react-native';
+import React from "react";
+import { SafeAreaView, View, Text, Image, TextInput, Picker, FlatList, TouchableOpacity } from "react-native";
 
 const ScreenComponent = () => {
   const dummyData = [{
-    id: '1',
-    name: 'Client 1',
-    email: 'client1@example.com'
+    id: "1",
+    name: "Client 1",
+    email: "client1@example.com"
   }, {
-    id: '2',
-    name: 'Client 2',
-    email: 'client2@example.com'
+    id: "2",
+    name: "Client 2",
+    email: "client2@example.com"
   }, {
-    id: '3',
-    name: 'Client 3',
-    email: 'client3@example.com'
+    id: "3",
+    name: "Client 3",
+    email: "client3@example.com"
   }];
   return <SafeAreaView style={_styles.kMtwVmCW}>
       <View style={_styles.FvGxeswp}>
-        <Button title="Manage Clients" />
-        <Button title="Manage Templates" />
-        <Button title="Manage Co-Adviser" />
+        <TouchableOpacity style={_styles.button}>
+          <Text style={_styles.buttonText}>Manage Clients</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={_styles.button}>
+          <Text style={_styles.buttonText}>Manage Templates</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={_styles.button}>
+          <Text style={_styles.buttonText}>Manage Co-Adviser</Text>
+        </TouchableOpacity>
         <Image source={{
-        uri: 'https://tinyurl.com/42evm3m3'
+        uri: "https://tinyurl.com/42evm3m3"
       }} style={_styles.virGmmDm} />
-        <Button title="Complete Profile Setup/My Profile" />
-        <Button title="Log Out" />
+        <TouchableOpacity style={_styles.button}>
+          <Text style={_styles.buttonText}>Complete Profile Setup/My Profile</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={_styles.button}>
+          <Text style={_styles.buttonText}>Log Out</Text>
+        </TouchableOpacity>
 
         <Text style={_styles.JhldsTbx}>Analytics</Text>
 
@@ -44,14 +54,13 @@ const ScreenComponent = () => {
         <FlatList data={dummyData} keyExtractor={item => item.id} renderItem={({
         item
       }) => <View>
-              <CheckBox />
               <Text>{item.name}</Text>
               <Text>{item.email}</Text>
             </View>} />
 
         <Text>Graphical View</Text>
         <Image source={{
-        uri: 'https://tinyurl.com/42evm3m3'
+        uri: "https://tinyurl.com/42evm3m3"
       }} style={_styles.APIWjAXD} />
 
         <Text>Number of New Clients</Text>
@@ -92,5 +101,15 @@ const _styles = StyleSheet.create({
   APIWjAXD: {
     width: "100%",
     height: 200
+  },
+  button: {
+    backgroundColor: '#2196F3',
+    padding: 10,
+    margin: 10,
+    borderRadius: 5
+  },
+  buttonText: {
+    color: '#fff',
+    textAlign: 'center'
   }
 });

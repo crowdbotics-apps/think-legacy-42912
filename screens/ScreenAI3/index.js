@@ -21,7 +21,9 @@ const App = () => {
       }}>
           <Text style={styles.buttonText}>Forgot password</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => {}}>
+        <TouchableOpacity style={styles.button} onPress={() => {
+        navigation.navigate("ScreenAI14");
+      }}>
           <Text style={styles.buttonText}>Log in</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => {

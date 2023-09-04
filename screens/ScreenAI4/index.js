@@ -1,3 +1,4 @@
+import { Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { StyleSheet } from "react-native";
 import React from "react";
@@ -30,9 +31,9 @@ const SignUpScreen = () => {
       </TouchableOpacity>
       <Text style={_styles.eJSJfofE}>
         By signing up, you agree to our{" "}
-        <Text style={_styles.XwNNzgkS} onPress={() => Linking.openURL("https://tinyurl.com/42evm3m3")}>
-          Terms and Conditions and Privacy Policy
-        </Text>
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI7");
+      }}><Text style={_styles.XwNNzgkS} onPress={() => Linking.openURL("https://tinyurl.com/42evm3m3")}>{"\n          Terms and Conditions and \n        "}</Text></Pressable>
       </Text>
       <View style={_styles.ItmAonXF}>
         <Text>Already have an account? </Text>
@@ -40,7 +41,9 @@ const SignUpScreen = () => {
           <Text style={_styles.xwdyLQvz}>Login</Text>
         </TouchableOpacity>
       </View>
-    </SafeAreaView>;
+    <Pressable onPress={() => {
+      navigation.navigate("ScreenAI8");
+    }}><Text style={_styles.ahePgHxC}>{"Privacy Policy"}</Text></Pressable></SafeAreaView>;
 };
 
 export default SignUpScreen;
@@ -89,7 +92,9 @@ const _styles = StyleSheet.create({
     marginTop: 20
   },
   XwNNzgkS: {
-    color: "blue"
+    color: "blue",
+    width: 196,
+    height: 49
   },
   ItmAonXF: {
     flexDirection: "row",
@@ -108,5 +113,16 @@ const _styles = StyleSheet.create({
   buttonText: {
     color: "#FFFFFF",
     textAlign: "center"
+  },
+  ahePgHxC: {
+    width: 100,
+    height: 24,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0,
+    position: "absolute",
+    left: 191,
+    top: -50,
+    color: "#0042ff"
   }
 });
