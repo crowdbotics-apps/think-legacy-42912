@@ -1,7 +1,9 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { SafeAreaView, View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 
 const ScreenComponent = () => {
+  const navigation = useNavigation();
   return <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <Image style={styles.logo} source={{
@@ -9,10 +11,14 @@ const ScreenComponent = () => {
       }} />
         <Text style={styles.title}>Side Menu</Text>
       </View>
-      <TouchableOpacity style={styles.button} onPress={() => {}}>
+      <TouchableOpacity style={styles.button} onPress={() => {
+      navigation.navigate("ScreenAI39");
+    }}>
         <Text style={styles.buttonText}>View</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => {}}>
+      <TouchableOpacity style={styles.button} onPress={() => {
+      navigation.navigate("ScreenAI40");
+    }}>
         <Text style={styles.buttonText}>Members</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button} onPress={() => {}}>
