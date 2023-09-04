@@ -36,10 +36,14 @@ const ScreenComponent = () => {
     }}>
         <Text style={styles.buttonText}>Values</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => {}}>
+      <TouchableOpacity style={styles.button} onPress={() => {
+      navigation.navigate("ScreenAI45");
+    }}>
         <Text style={styles.buttonText}>Goal Clarity / Goal Achievement</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => {}}>
+      <TouchableOpacity style={styles.button} onPress={() => {
+      navigation.navigate("ScreenAI46");
+    }}>
         <Text style={styles.buttonText}>Planning Map</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button} onPress={() => {}}>
